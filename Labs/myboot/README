@@ -1,0 +1,17 @@
+
+final target: 
+use `dd` to download myboot.16k into SD card from the first sector.
+                `dd if=myboot.16k of=/dev/sdb seek=1`
+
+
+use objdump to analyse object files. The addr will update after link stage.
+
+We can indeed light on leds, only if we had a board and the address of register rightly configed.   It is not necessary to enter u-boot's Makefile, and this is a simple bare program.
+
+
+
+This diagram explains the layout of iROM, the place this program executing in. 
+And explain why the program begins with exception vector table and why link address is 0xD0020010.
+
+
+[精准空降到 03:31](https://www.bilibili.com/video/BV1s4411t7eT/?p=14&share_source=copy_web&vd_source=3a47af2bdf0098d9549048b60e2f083a&t=211)

@@ -1,0 +1,5 @@
+./mkimage -A arm -O linux -T kernel -C none -a 0x30008000 -e 0x30008040 -d zImage uImage
+
+echo "after transform, the header is:"
+
+./mkimage -l uImage
